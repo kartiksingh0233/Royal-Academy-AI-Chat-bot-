@@ -1,0 +1,7 @@
+{
+  "name": "Royal Academy EduBot",
+  "description": "A high-tech, futuristic educational AI chatbot for Royal Academy with voice capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

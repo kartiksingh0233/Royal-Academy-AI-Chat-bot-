@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Academy EduBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              tech: ['Rajdhani', 'sans-serif'],
+            },
+            colors: {
+              'cyber-bg': '#020617',     // Deep Space
+              'cyber-panel': '#0f172a',  // Dark Slate
+              'cyber-primary': '#06b6d4', // Neon Cyan
+              'cyber-secondary': '#6366f1', // Electric Indigo
+              'cyber-accent': '#f43f5e',    // Neon Pink
+              'cyber-gold': '#fbbf24',    // Royal Gold
+              'cyber-text': '#e2e8f0',    // Light Gray
+            },
+            boxShadow: {
+              'neon': '0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.3)',
+              'neon-gold': '0 0 10px rgba(251, 191, 36, 0.5)',
+              'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+              'radial-glow': "radial-gradient(circle at center, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
+            },
+            animation: {
+              'scan': 'scan 4s linear infinite',
+              'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { backgroundPosition: '0% 0%' },
+                '100%': { backgroundPosition: '0% 100%' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: '1', filter: 'brightness(1.2)' },
+                '50%': { opacity: '0.8', filter: 'brightness(1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617;
+        color: #e2e8f0;
+      }
+      
+      /* Cyber Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #06b6d4; 
+        border-radius: 2px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #22d3ee; 
+        box-shadow: 0 0 10px #22d3ee;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root" class="h-screen w-screen overflow-hidden bg-cyber-bg text-cyber-text"></div>
+  </body>
+</html>
